@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4f8234bc7c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#"> Home</a></li>
+                    <li><a href="#"> About</a></li>
+                    <li><a href="#"> Services</a></li>
+                    <li><a href="#"> Portfolio</a></li>
+                    <li><a href="#"> Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1> Hi , I'm <span>Arpit Sahu</span></h1>
+            </div>
+
+        </div>
+    </div>
+    <div class="about">
+        <div id="aboutcontainer">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1>About me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto neque a illum illo, nam amet
+                        blanditiis culpa tenetur libero eligendi earum debitis odit doloremque. Iure, quaerat
+                        voluptatum. Nihil, officia itaque.</p>
+                    <div class="tab-titles">
+                        <p class="info activelink" onclick="opentab('skills')">Skills</p>
+                        <p class="info" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="content activetab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web App Interfaces</li>
+                            <li><span>Web Development</span><br> Web App Development</li>
+                        </ul>
+                    </div>
+                    <div class="content" id="education">
+                        <ul>
+                            <li><span>UI/UX</span><br>hello</li>
+                            <li><span>Web Development</span><br> Whiii bye ye</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-----------------------services------------->
+        <div class="services">
+            <div class="container">
+                <h1 class="sub-title"> My Services </h1>
+                <div class="services-list">
+                   <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore exercitationem facere modi provident ipsam repellendus eos enim temporibus omnis libero magni, quod aut, suscipit illo necessitatibus vitae itaque expedita excepturi sed obcaecati placeat quaerat. Eveniet exercitationem deserunt dolores eligendi quo ex non odit maiores?</p>
+                    <a href="#">Learn More</a>
+                   </div>
+                   <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore exercitationem facere modi provident ipsam repellendus eos enim temporibus omnis libero magni, quod aut, suscipit illo necessitatibus vitae itaque expedita excepturi sed obcaecati placeat quaerat. Eveniet exercitationem deserunt dolores eligendi quo ex non odit maiores?</p>
+                    <a href="#">Learn More</a>
+                   </div>
+
+                </div>
+            </div>
+        </div>
+        <script>
+            let links = document.getElementsByClassName("info");
+            var content = document.getElementsByClassName("content");
+            function opentab(tabname) {
+                for (i of links) {
+                    i.classList.remove("activelink");
+                }
+            
+                for (i of content) {
+                    i.classList.remove("activetab");
+                }
+                event.currentTarget.classList.add("activelink");
+                document.getElementById(tabname).classList.add("activetab");
+            
+            }
+    
+        </script>
+</body>
+
+</html>
